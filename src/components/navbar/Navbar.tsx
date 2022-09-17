@@ -4,46 +4,46 @@ import './Navbar.css';
 function Navbar() {
     return(
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
-                    <a className="navbar-brand">
-                        <img src="cropped-Logo-HEI-transparent600-1.png" alt="" width="30" height="24"
-                             className="d-inline-block align-text-top">
-                            HEI</img>
-                    </a>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" href="#">Home</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr className="dropdown-divider"></hr>
-                                    </li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#" >Other</a>
-                            </li>
-                        </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-                            <button className="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
+            <Container>
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Create new event</Nav.Link>
+                    <Nav.Link href="#features">event created</Nav.Link>
+                    <Nav.Link href="#pricing"></Nav.Link>
+                </Nav>
+            </Container>
+            <div className="input-group mb-3">
+                <div className="input-group-prepend">
+                    <span className="input-group-text mx-5" id="inputGroup-sizing-default">Event name :</span>
                 </div>
-            </nav>
+                <input type="text" className="form-control mx-5" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default"></input>
+            </div>
+            <div className="mx-5">
+                <p>Group :</p>
+            </div>
+            <div className="form-check mx-5">
+                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                       value="option1"></input>
+                <label className="form-check-label" htmlFor="exampleRadios1">
+                    G1
+                </label>
+            </div>
+            <div className="form-check mx-5">
+                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                       value="option2"></input>
+                <label className="form-check-label" htmlFor="exampleRadios2">
+                    G2
+                </label>
+            </div>
+            <div className="form-check mx-5">
+                <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3"
+                       value="option3" ></input>
+                <label className="form-check-label" htmlFor="exampleRadios3">
+                    G3
+                </label>
+            </div>
+            <button type="button" className="btn btn-secondary btn-lg btn-block mx-5 m-md-5">Submit</button>
+        </>
         </>
     )
 }
