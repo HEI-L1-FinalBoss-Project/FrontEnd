@@ -4,13 +4,18 @@ import './Navbar.css';
 function Navbar() {
     return(
         <>
-            <Container>
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Create new event</Nav.Link>
-                    <Nav.Link href="#features">event created</Nav.Link>
-                    <Nav.Link href="#pricing"></Nav.Link>
-                </Nav>
-            </Container>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#">Create Event</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Authentication</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <div className="input-group mb-3">
                 <div className="input-group-prepend">
                     <span className="input-group-text mx-5" id="inputGroup-sizing-default">Event name :</span>
